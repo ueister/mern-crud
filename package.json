@@ -1,0 +1,14 @@
+{
+  "name": "mern-crud",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:backend": "cd backend && nodemon server.js --exec babel-node --presets es2015,stage-0",
+    "start:frontend": "cd reactfrontend && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
