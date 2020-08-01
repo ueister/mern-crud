@@ -7,10 +7,9 @@ const CommentsShow = (props) => {
 		<div className="row" id={props.id}>
 			<div className="col">{props.author}</div>
 			<div className="col">{props.text}</div>
-			<div className="col"><span onClick={() => { props.handleTest(); }}>Delete</span></div>
-			{/* <div className="col"><Link to={"/update/"+props.id}>Update</Link></div>
-			<div className="col"><Link to={"/delete/"+props.id}>Delete</Link></div>
-			<div className="col"><span onClick={() => { removeTodo(props.id); }}>Delete</span></div> */}
+			<div className="col"><span onClick={() => { props.getComment(props.id); }}>Update</span></div>
+			<div className="col"><span onClick={() => { props.removeComment(props.id); }}>Delete</span></div>
+			{/* <div className="col"><span onClick={() => { props.handleTest(); }}>Test</span></div> */}
 		</div>
     );
 }
@@ -19,7 +18,9 @@ CommentsShow.propTypes = {
 	id: PropTypes.string.isRequired,
 	author: PropTypes.string.isRequired,
 	text: PropTypes.string.isRequired,
-	handleTest: PropTypes.func.isRequired,
+//	handleTest: PropTypes.func.isRequired,
+	getComment: PropTypes.func.isRequired,
+	removeComment: PropTypes.func.isRequired
 };
 
 export default CommentsShow;

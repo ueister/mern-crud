@@ -5,6 +5,7 @@ import './App.css';
 import { Todos } from './components/Todos';
 import { TodosCreate } from './components/TodosCreate';
 import { TodosUpdate } from './components/TodosUpdate';
+import { Comments } from './components/Comments';
 //import { TodosDelete } from './components/TodosDelete';
 
 function App() {
@@ -19,12 +20,16 @@ function App() {
 						<li className="nav-item">
 							<Link className="nav-link" to={"/create"}>New</Link>
 						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to={"/comments"}>Comments</Link>
+						</li>
 					</ul>
 				</nav>
 				{/* <Todos data={data} /> */}
 				<Route path="/" exact component={Todos} />
 				<Route path="/create" exact component={TodosCreate} />
 				<Route path="/update/:id" exact component={TodosUpdate} />
+				<Route path="/comments" exact component={Comments} />
 				{/* <Route path="/delete/:id" exact component={TodosDelete} />
 				<Welcome /> */}
 			</div>

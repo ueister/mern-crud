@@ -36,7 +36,7 @@ export class TodosUpdate extends React.Component {
 			})
 			.catch(function (error){
 				console.log(error);
-			})
+		});
 	}
 /*
 	getData(id) {

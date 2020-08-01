@@ -1,17 +1,17 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 
-export class CommentsForm extends React.Component {
+class CommentsForm extends React.Component {
 	render() {
 		return (
 			<div>
 				<form onSubmit={this.props.onSubmit}>
 					<div className="form-group">
-						<label>Responsible</label>
+						<label>User</label>
 						<input type="text" className="form-control" name="author" id="author" onChange={this.props.handleAuthor} value={this.props.author} />
 					</div>
 					<div className="form-group">
-						<label>Description</label>
+						<label>Comment</label>
 						<input type="text" className="form-control" name="text" id="text" onChange={this.props.handleText} value={this.props.text} />
 					</div>
 					<div>
@@ -22,6 +22,8 @@ export class CommentsForm extends React.Component {
 		);
 	}
 }
+
+export default CommentsForm;
 /*
 CommentsForm.propTypes = {
 	author: PropTypes.string.isRequired,

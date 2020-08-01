@@ -37,7 +37,7 @@ export class CommentsList extends React.Component {
 }
 */
 const CommentsList = (props) => {
-    const data = props.data.map((x,i) => <CommentsShow key={i} id={x._id} author={x.author} text={x.text} handleTest={props.test} />);
+    const data = props.data.map((x,i) => <CommentsShow key={i} id={x._id} author={x.author} text={x.text} getComment={props.getComment} removeComment={props.removeComment} handleTest={props.test} />);
     return (
       <div>
         {data}
